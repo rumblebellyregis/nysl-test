@@ -1,0 +1,252 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p,  blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,p2,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html,body {
+  height: 100%;
+   }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+    background: linear-gradient(to right, green , yellow);
+    width:100%;
+    min-height:100%;
+    display: flex;
+    flex-wrap:wrap;
+    align-content: flex-start;
+    line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+    border-spacing: 0;}
+.header{height: 25%;
+    width: 100%;
+    justify-content: center;
+    display:inline-flex;
+}
+.img{width:100%;
+    }
+.yazi{align-self:center;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    filter: blur(2px);
+    font-size:56px;
+}
+.karakutu{height: 5%;
+    font-size: 36px;
+    font-family: sans-serif;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background: black;
+    align-items: center;
+    justify-content: center;
+}
+.logo{position: absolute;
+z-index:1;
+align-self: flex-end;
+right:10%;
+top:22.5%;
+}
+.main {width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    margin-top:20px;
+    font-size: 28px; 
+    padding: 0px 10px;
+    text-align: center;
+    min-height: 55%;
+    padding-bottom: 50px;}
+
+a:link, a:visited, a:hover{
+    color:black}
+
+li.selected{ 
+    display:inline;
+    margin-top:15px;
+    margin-bottom:25px;
+    color:black;
+    margin-left: 10px;
+    font-weight: 900;
+    ;
+}
+nav >ul> li{ display:inline;
+    margin-top:15px;
+    margin-bottom:25px;
+    color:black;
+    margin-left: 10px;}
+ul{list-style: none;
+          left: 10%;
+    text-align: left;
+    text-align: justify;
+    font-family: sans-serif;
+    
+    
+}
+.square{list-style: square;
+          
+    
+}
+.circle{list-style: circle;
+          
+}
+.bold{font-weight: 900;
+font-family: inherit
+}
+table{margin-top: 30px; margin-bottom: 30px; text-align: center;
+width: 60%;
+font-family: sans-serif;
+font-size: 24px;
+margin:auto;}
+th,td{width: 15%; padding-left: 2px;
+padding-right: 2px;}
+ul.gameinfo{width:60%;
+margin:auto;
+font-size: 26px;}
+table.gameplace{margin-top: 30px; margin-bottom: 30px; text-align: left;
+width: 60%;
+font-family: sans-serif;
+font-size: 24px;
+margin-left: 20%;
+margin-right:20%;}
+
+th,td{width: 15%; padding-left: 2px;
+padding-right: 2px;}
+
+tr:hover {filter: blur(2px);}
+.match{font-weight: 900;
+text-align: center;
+text-decoration: underline}
+.place{font-weight: 900;
+text-align: left;}
+.ital{font-style: italic;
+text-decoration: underline;}
+ol.bold {
+font-weight: bold;
+    
+}
+.normal{font-weight: 500;}
+li span { font-weight: normal; }
+.map{width:60%;
+margin-top:20px;
+margin-bottom: 30px;
+margin-left: 20%;
+margin-right: 20%;
+display: none;
+height: auto;
+align-items: center;
+
+}
+.name{width:40%;
+    font-family: sans-serif;
+    font-size: 24px;
+    float:left;
+}
+.mapplace{width:60%;
+    float:right;
+    }
+form{
+font-size: 24px;
+
+font-family: sans-serif;
+line-height: 1;
+text-align: left;
+margin-bottom: 5%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap
+}
+.fs1{width: 100%;
+    display:flex;
+    justify-content: center;
+   
+}
+.fs2{width: 100%;
+    display:flex;
+    justify-content: center;}
+.inp1{
+background-color: transparent;
+border: none;
+border-bottom: 2px solid black;
+
+font-size: 24px;
+font-family: sans-serif;
+text-align: center;}
+.inp2{
+    left:10%;
+        
+background-color: transparent;
+border: none;
+border-bottom: 2px solid black;
+margin-bottom: 15px;
+        margin-right: 2.5%;
+    margin-left:2.5%;
+font-size: 24px;
+font-family: sans-serif;
+
+text-align: center;}
+
+.lg1{display: flex;
+    flex-direction: row;
+justify-content: center;}
+
+        
+    
+
+
+
+.regh{text-decoration: underline;
+font-size: 12px;
+font-family: sans-serif;
+font-weight: 900;}
+.regb{font-size: 12px;
+font-family: sans-serif;}
+.sendb{background-color: ghostwhite;
+border: none;
+width:200px;
+margin:auto}
+
+.yataynav{width: 100%;
+    background: linear-gradient(to right, red , yellow);
+    z-index: 1;    
+    height: 50px;      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    bottom:5%;
+    overflow: hidden;}
+.sendd{display:flex;
+width:100%;}
+
+.super{vertical-align: super;
+font-size: 18px;}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<title> Gameinfo </title>
+    <link rel="stylesheet" href="nysl_4.css">
+    
+  </head>
+  <body >
+       <div class='header'><h1 class='yazi'>Northside Youth Soccer League</h1>
+           <img class='img'   alt='img1' src="design1_image1.jpg" >
+                           </div>  
+      <div class='karakutu'><h1>NYSL Game Information</h1>
+          <img class='logo' src="nysl_logo.png" alt="logo" width="100" height="100">
+          
+      </div>
+      <div class='main'> <ul class='gameinfo'><li>Fall Schedule</li>
+          <li class="ital">*All games takes place on Saturday</li></ul>
+        
+      <table><tr class='match'><th>September</th><th>Teams</th><th>Location</th><th>Times</th></tr>
+        <tr><td rowspan="2">9/01</td> <td>U1 and U4</td> <td>AJ Katzenmaier</td> <td>9:30 a.m.</td></tr>
+          <tr><td>U3 and U2</td> <td>Greenbay </td><td>1:00 p.m.</td></tr>
+          <tr><td rowspan="2">9/08</td> <td>U5 and U6</td> <td>Howard A Yeager</td> <td>9:30 a.m.</td></tr>
+          <tr><td>U6 and U1</td> <td>Marjorie P Hart </td><td>1:00 p.m.</td></tr>
+          <tr><td rowspan="2">9/15</td> <td>U2 and U4</td> <td>North</td> <td>9:30 a.m.</td></tr>
+          <tr><td>U3 and U5</td> <td>AJ Katzenmaier </td><td>1:00 p.m.</td></tr>
+          <tr><td rowspan="2">9/22</td> <td>U1 and U3</td> <td>South</td> <td>9:30 a.m.</td></tr>
+          <tr><td>U2 and U6</td> <td>Howard A Yeager </td><td>1:00 p.m.</td></tr>
+          <tr><td >9/29</td> <td>U4 and U5</td> <td>Greenbay</td> <td>9:30 a.m.</td></tr>
+        
+        </table>
+      
+            <table><tr class='match'><th>October</th><th>Teams</th><th>Location</th><th>Times</th></tr>
+        <tr><td rowspan="2">10/06</td> <td>U2 and U5</td> <td>Marjorie P Hart</td> <td>9:30 a.m.</td></tr>
+          <tr><td>U1 and U6</td> <td>South </td><td>1:00 p.m.</td></tr>
+          <tr><td rowspan="2">10/13</td> <td>U3 and U4</td> <td>Howard A Yeager</td> <td>9:30 a.m.</td></tr>
+          <tr><td>U5 and U1</td> <td>Greenbay </td><td>1:00 p.m.</td></tr>
+          <tr><td rowspan="2">10/20</td> <td>U6 and U3</td> <td>North</td> <td>9:30 a.m.</td></tr>
+          <tr><td>U2 and U4</td> <td>Marjorie P Hart </td><td>1:00 p.m.</td></tr>
+          <tr><td rowspan="2">10/27</td> <td>U3 and U1</td> <td>AJ Katzenmaier</td> <td>9:30 a.m.</td></tr>
+          <tr><td>U5 and U6</td> <td>Howard A Yeager </td><td>1:00 p.m.</td></tr>
+          
+        
+        </table>
+      
+      <table class='gameplace'><tr class="place"><th colspan="2"> Game Locations:</th></tr>
+          <tr><td>AJ Katzenmaier Elementary</td><td>24 W. Walton St., Chicago, IL 60610</td></tr>
+          
+          <tr><td>Greenbay Elementary</td><td>1734 N. Orleans St., Chicago, IL 60614</td></tr>
+          <tr><td>Howard A Yeager Elementary</td><td>2245 N. Southport Ave., Chicago, IL 60614</td></tr>
+          <tr><td>Marjorie P Hart Elementary</td><td>2625 N. Orchard St., Chicago, IL 60614</td></tr>
+          <tr><td>North Elementary</td><td>1409 N. Ogden Ave., Chicago, IL 60610</td></tr>
+          <tr><td>South Elementary</td><td>2101 N. Fremont St., Chicago, IL 60614</td></tr>
+        
+        </table >
+        <div class='fs2'><select  id="secmece" name="secmece">
+            
+    <option value="1" >AJ Katzenmaier Elementary</option>
+    <option value="2">Greenbay Elementary</option>
+    <option value="3">Howard A Yeager Elementary</option>
+    <option value="4" >Marjorie P Hart Elementary</option>
+    <option value="5">North Elementary</option>
+    <option value="6">South Elementary</option>
+</select></div>
+        <script>
+document.getElementById('secmece').onchange = function() {
+    var i = 1;
+    var myDiv = document.getElementById(i);
+    while(myDiv) {
+        myDiv.style.display = 'none';
+        myDiv = document.getElementById(++i);
+    }
+    document.getElementById(this.value).style.display = 'flex';
+};
+        </script>
+        
+        <div   class='map' style="display: flex" id='1' >
+            <div class="name">   
+            <h3><a id='target1'>AJ Katzenmaier Elementary</a></h3>
+            <p>24 W. Walton St., Chicago, IL 60610</p></div> 
+               <iframe  class='mapplace' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4199.7285131043955!2d-87.62797266216538!3d41.90024368243442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e07f69da7%3A0x15e198c063fc787c!2sAJ+Katzenmaier+Elementary!5e0!3m2!1str!2snl!4v1532073882634" width="600" height="200"  allowfullscreen></iframe>
+            </div>  
+                <div id='2' class='map'>
+            <div class="name">   
+                <h3><a id='target2'>Greenbay Elementary</a></h3>
+            <p>1734 N. Orleans St., Chicago, IL 60614</p></div> 
+               <iframe  class='mapplace' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.022795992304!2d-87.64002218429961!3d41.91386867115344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3407260c45b%3A0xb351205fae50c6f3!2sGreenbay+Elementary!5e0!3m2!1str!2snl!4v1532076947420" width="600" height="200"  allowfullscreen></iframe>
+            </div> 
+                <div id='3' class='map'>
+            <div class="name">   
+                <h3><a id='target3'>Howard A Yeager Elementary</a></h3>
+            <p>2245 N. Southport Ave., Chicago, IL 60614</p></div> 
+               <iframe  class='mapplace' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.58566487788!2d-87.66511018429937!3d41.923264970565164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd2e37f852467%3A0xb6cb22b2f0358874!2sHoward+A+Yeager+Elementary!5e0!3m2!1str!2snl!4v1532077171187" width="600" height="200"  allowfullscreen></iframe>
+            </div> 
+                <div id='4' class='map'>
+            <div class="name">   
+                <h3><a id='target4'>Marjorie P Hart Elementary</a></h3>
+            <p>2625 N. Orchard St., Chicago, IL 60614</p></div> 
+               <iframe class='mapplace' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.2896536436606!2d-87.64816138429929!3d41.929626870166565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd30f2637f9d7%3A0xdbff5d5dfcfcfa35!2sMarjorie+P+Hart+Elementary!5e0!3m2!1str!2snl!4v1532077384915" width="600" height="200"  allowfullscreen></iframe>
+            </div> 
+                <div  id='5' class='map'>
+            <div class="name">   
+            <h3>North Elementary</h3>
+                <p><a id='target5'>1409 N. Ogden Ave., Chicago, IL 60610</a></p></div> 
+               <iframe  class="mapplace" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d524.9092056552377!2d-87.64611665991285!3d41.90715945836736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd33af13a8945%3A0xb6ad1ec2b6f379ba!2s1409+N+Ogden+Ave%2C+Chicago%2C+IL+60610%2C+Birle%C5%9Fik+Devletler!5e0!3m2!1str!2snl!4v1532077628787" width="600" height="200"   allowfullscreen></iframe>
+            </div> 
+                <div id='6' class='map'>
+            <div class="name">   
+            <h3>South Elementary</h3>
+                <p><a id='target6'>2101 N. Fremont St., Chicago, IL 60614</a></p></div> 
+               <iframe class='mapplace' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2968.747834610714!2d-87.65355788429947!3d41.919779270783316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd3196fb41dc7%3A0x970be7f7d6336df5!2s2101+N+Fremont+St%2C+Chicago%2C+IL+60614%2C+Birle%C5%9Fik+Devletler!5e0!3m2!1str!2snl!4v1532077776578" width="600" height="200"  allowfullscreen></iframe>
+            </div> 
+        <ul class='gameinfo'><li><a class="bold">Facility Type:</a> Outdoor</li>
+          <li><a class="bold">Additional Information:</a> If deemed necessary by NYSL, games may be shortened or
+cancelled due to extreme weather conditions.</li>
+            <li><a class='bold'>Please direct all questions to:</a> Michael Randall, League Coordinator</li>
+            <li><a class="bold">Phone: </a>(630) 690-8132  <a class="bold"> &emsp; &emsp; &emsp; Email:</a> <a href="mailto:michael.randall@chisoccer.org?subject=Reaching%20Out&body=How%20are%20you" style='color:steelblue'>michael.randall@chisoccer.org</a></li>
+          
+          
+          </ul>
+    
+          
+          </div>
+            <nav class="yataynav"><ul>      
+    <li ><a  href="indexflex.html" style="font-size:16px">Home</a> </li>
+    <li ><a  href="aboutflex.html" style="font-size:16px">About NYSL</a> </li>
+    <li  ><a  href="contactflex.html" style="font-size:16px">Contact</a></li>
+    <li ><a  href="gamerulespolicyflex.html" style="font-size:16px">Rules of Play &amp; Policies</a></li>
+    <li class='selected'><a  href="game_infoflex.html" style="font-size:16px">Game Information</a></li>
+    <li ><a  href="registvalidator.html" style="font-size:16px">Register </a></li>
+  </ul></nav>
+	</body>
+    
+</html>

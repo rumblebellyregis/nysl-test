@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+	<title> register </title>
+    <link rel="stylesheet" href="nysl_4.css">
+    
+  </head>
+  <body >
+       <div class='header'><h1 class='yazi'>Northside Youth Soccer League</h1>
+           <img class='img'   alt='img1' src="design1_image1.jpg" >
+                           </div>  
+      <div class='karakutu'><h1>Registration Form</h1>
+          <img class='logo' src="nysl_logo.png" alt="logo" width="100" height="100">
+          
+      </div>
+      <div class='main'>
+                  <form action='show_data.html' method="get">
+            
+            <div class='fs1'>
+                <input type='hidden' id='season' name='season'>
+                <script>
+         var q = new Date();
+          var m = q.getMonth();
+          var d = q.getDate();
+          var y = q.getFullYear();
+                    if (m>7)
+                    {y=y+1;
+                        document.getElementById('season').value= 'Spring '+y}
+                    else
+                        {document.getElementById('season').value= 'Fall '+y }
+                
+                
+                
+                </script>
+                <ul ><li>First name 
+                <input  class='inp1' type="text" id='1' name="firstname" required></li></ul>
+                <ul ><li>Last name:
+                
+            <input   class="inp1" type="text" name="lastname" id='2' required> </li></ul>
+            
+            </div>
+            <div class='fs1'><ul><li>StreetAdress
+            <input class='inp1' type="text" name="Address" id='3' required ></li></ul></div>
+            
+            
+            <div class='fs1' >
+                <ul ><li>City
+            <input class='inp1' type="text" name="City" id='4' required></li></ul>
+                <ul ><li>Zipcode
+            <input class='inp1' type="text" name="Zipcode" id='5' placeholder='12345' required></li></ul>
+            
+            </div> 
+             
+            <div class='fs1' >
+                <ul ><li>Birthday(mm/dd/yyyy)
+            <input  type="text" class='inp1' name="birthday" id='7'  required></li></ul>
+                <ul><li>Gender
+            <input type="radio"  name="Gender" value="Female" required > Female
+            <input type="radio"  name="Gender" value="Male" required> Male</li></ul>
+            
+            </div>
+            <div class='fs1'  >
+            <ul><li>Grade:
+            <input type="radio" name="Grade" value="Pre-School" required >Pre-School 
+                <input type="radio" name="Grade" value="1<sup>st</sup" required> 1<a class='super'>st</a>
+            <input type="radio" name="Grade" value="2<sup>nd</sup>" required>2<a class='super'>nd</a>
+            <input type="radio" name="Grade" value="3<sup>rd</sup" required> 3<a class='super'>rd</a>
+            <input type="radio" name="Grade" value="4<sup>th</sup" required> 4<a class='super'>th</a>
+            <input type="radio" name="Grade" value="5<sup>th</sup>" required> 5<a class='super'>th</a></li></ul>
+            </div>
+            
+            <div class='fs1'> <ul><li>Parent/Guardian:
+            <input class='inp1' type="text" id='6' name="Parent Name" required ></li></ul></div> 
+            
+            <div class='fs1' >
+                <ul ><li>Contact Phone:
+            <input  class='inp1' type="text" id='8' name="phone-number"  placeholder='111-222-3333'  required></li></ul>
+            <ul ><li>Contact E-Mail:
+            <input class='inp1' type="text" id='9' name="email-address" required></li></ul>
+            
+            </div>
+            
+           
+            
+            <div class='fs1' > 
+                <ul><li>Which elementary schools do you live near?</li>
+                <li>First Closest School:<select id='first' name="School near First" required  onchange="myfunc2()" >
+     <option value=''>----------</option>
+    <option value="AJ Katzenmaier Elementary" >AJ Katzenmaier Elementary</option>
+    <option value='Greenbay Elementary'>Greenbay Elementary</option>
+    <option value="Howard A Yeager Elementary">Howard A Yeager Elementary</option>
+    <option value="Marjorie P Hart Elementary" >Marjorie P Hart Elementary</option>
+    <option value="North Elementary">North Elementary</option>
+    <option value="South Elementary">South Elementary</option>
+</select>
+    
+            Second Closest School: <select id='second' name="School near Second" required onchange="myfunc2()">
+    <option value=''>----------</option>
+    <option value="AJ Katzenmaier Elementary" >AJ Katzenmaier Elementary</option>
+    <option value='Greenbay Elementary'>Greenbay Elementary</option>
+    <option value="Howard A Yeager Elementary">Howard A Yeager Elementary</option>
+    <option value="Marjorie P Hart Elementary" >Marjorie P Hart Elementary</option>
+    <option value="North Elementary">North Elementary</option>
+    <option value="South Elementary">South Elementary</option>
+</select></li></ul>
+           <script>
+               function myfunc2()
+               
+               {var x=document.getElementById('first').value;
+                var y=document.getElementById('second').value;
+                console.log(x);
+                console.log(y);
+
+               for (i=0; i<document.getElementById("second").options.length; i++)
+                   {if (x==document.getElementById('second').options[i].value)                   
+                        {document.getElementById('second').options[i].disabled=true;}
+                   }
+            for (i=0; i<document.getElementById("first").options.length; i++)
+                   {if (y==document.getElementById('first').options[i].value)                   
+                        {document.getElementById('first').options[i].disabled=true;}
+                
+               }}
+                </script>
+            </div> 
+            
+            
+            <div class='fs1' >
+                <ul><li>What positions do you normally play?( Can be choosen multiple)</li>
+            
+            
+            <li><input type="checkbox" name="playing"  value="Forward" > Forward
+            <input type="checkbox" name="playing" value="Goalkeeper" > Goalkeeper</li>
+            <li><input type="checkbox" name="playing"  value="Defense" > Defense
+            <input type="checkbox" name="playing" value="Midfield" > Midfield</li>
+            </ul></div>
+            
+            <div class='fs1' > 
+                <ul><li>What positions do you want to play? ( Can be choosen multiple)</li>
+                
+            <li><input type="checkbox" name=" wanna playing"  value="Forward" > Forward
+            <input type="checkbox" name="wanna playing" value="Goalkeeper"> Goalkeeper
+                </li>
+            <li><input type="checkbox" name="wanna playing"  value="Defense"> Defense
+            <input type="checkbox" name="wanna playing" value="Midfield"> Midfield
+            </li>
+                </ul></div>
+            
+            <div class='fs1'>
+              <ul><li><input  id="kontrol" onclick="myFunction()" type="checkbox" name='alreadyhave'  > Already have a uniform</li></ul>
+            <input type="hidden" id="Jers" name="jersey" value="AlreadyHave" disabled>
+            <input type="hidden" id="Shrt" name="Shorts" value="Alreadyhave" disabled>
+                </div>
+            <script>
+                function myFunction() 
+                
+            {var z=document.getElementsByName('Jersey');
+             var y=document.getElementsByName('Short');
+             
+                console.log(z);
+    
+                if (document.getElementById("kontrol").checked==true)
+                {  for (j=0; j<z.length; j++)
+                    {z[j].disabled=true};
+                    for (k=0; k<y.length; k++)
+                    {y[k].disabled=true};
+                    document.getElementById("Jers").disabled = false;
+                    document.getElementById("Shrt").disabled = false;
+  
+                            }
+                
+                else 
+                {for (j=0; j<z.length; j++)
+                    {z[j].disabled=false};
+                    for (k=0; k<y.length; k++)
+                    {y[k].disabled=false};
+                document.getElementById("Jers").disabled = true;
+                document.getElementById("Shrt").disabled = true;}
+            }
+
+            </script>
+            
+
+            <div class='fs1' id='jerseey'>
+                            
+           <ul  ><li>Jersey </li> 
+                <li><input type="radio" name="Jersey" value="YS" required>YS <input type="radio" name="Jersey" value="M" required> M </li>
+            <li><input type="radio" name="Jersey" value="YM" required> YM <input type="radio" name="Jersey" value="L" required> L</li>
+            <li><input type="radio" name="Jersey" value="YL>" required>YL <input type="radio" name="Jersey" value="XL" required> XL</li>
+            <li><input type="radio" name="Jersey" value="S" required> S </li>
+            </ul>
+                 
+            <ul > <li>Short</li>
+                <li><input type="radio" name="Short" value="YS" required>YS <input type="radio" name="Short" value="M" required> M </li>
+            <li> <input type="radio" name="Short" value="YM" required> YM <input type="radio" name="Short" value="L" required> L</li>
+            <li><input type="radio" name="Short" value="YL>" required>YL  <input type="radio" name="Short" value="XL" required> XL</li>
+            <li> <input type="radio" name="Short" value="S" required> S</li>
+                </ul>
+             
+                 </div>
+            <p class='regh'>Permission to Play</p>
+<p class='regb'>I, the parent or guardian of the minor registrant, agree that the registrant and I will abide by all the rules of the Northside Youth
+Soccer League (NYSL). In recognizing the possibility of physical injury associated with soccer and in consideration for the “League”
+accepting the registrant for its soccer programs and activities, I hereby release, discharge, and/or otherwise indemnify NYSL, their
+employees and associated personnel and volunteers, including the facilities used for practices and games, against any claim by or
+on behalf of the registrant as a result of the registrant’s participation in the program and/or being transported to or from NYSL
+    sponsored activities, which transportation.</p>
+<p class='regb'>By writing my name below, I hereby agree and authorize the above. In addition, by writing my name below, I also acknowledge that I have read the
+cancellation policy and agree to its terms.</p>
+            
+                <div class='fs1'><ul ><li>Parent's name: <input class='inp1' id='28'  type="text" name="parent sign" required></li></ul>
+                    <ul ><li> submission date (mm/dd/yyyy)<input type="text" class='inp1' id='11' name="Submission date" required></li></ul>
+            
+            </div>
+            
+            
+            
+
+
+            <input class='sendb' type="submit" name="submit" value="Send" onclick='Myvalidation()'>
+        
+   <script>
+       
+        {
+var dateformat = /^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/;
+var inputs = document.getElementsByTagName('input');
+var count=''    
+            function Myvalidation()
+    {     
+/*for(var i = 0; i < inputs.length; i++) {
+    if(inputs[i].type.toLowerCase() == 'text') {
+        var id=inputs[i].getAttribute('id');
+        var name2=inputs[i].getAttribute('name')
+        var a=document.getElementById(id).value
+        if (a==''){
+            alert(name2+' need to be filled');
+             } }}*/
+ /*for(var i = 0; i < inputs.length; i++) {
+    if(inputs[i].type.toLowerCase() == 'radio'){
+        var name3=inputs[i].getAttribute('name');
+        var c=document.getElementsByName(name3);
+        if (count==name3){
+            i=i+1;
+            ;}
+        else{
+            count=name3;
+        //console.log(c);
+           for (var t=0; t<c.length; t++){
+             
+               if (c[t].checked==true || c[t].disabled==true){
+                   break;}}
+                if (t==c.length){
+                    alert(name3+' did not checked');
+                }}}}
+    
+ for(var i = 0; i < inputs.length; i++) {
+    if(inputs[i].type.toLowerCase() == 'checkbox'){
+        var name4=inputs[i].getAttribute('name');
+        var c=document.getElementsByName(name4);
+        if (count==name4){
+            i=i+1;
+            ;}
+        else{
+            count=name4;
+        //console.log(c);
+           for (var t=0; t<c.length; t++){
+               
+               if (c[t].checked==true || name4=='alreadyhave'){
+                   break;}}
+                if (t==c.length){
+                    alert(name4+' did not checked');  
+    
+    
+    }}}}*/ 
+    
+for(var i = 0; i < inputs.length; i++) {
+    if(inputs[i].type.toLowerCase() == 'text') {
+        var name2=inputs[i].getAttribute('name')
+        if (name2=='birthday' || name2=="Submission date"){
+            var id=inputs[i].getAttribute('id');
+            date=document.getElementById(id).value;
+            if (date != ''){
+             if(date.match(dateformat))
+  {
+  
+  //Test which seperator is used '/' or '-'
+  var opera1 = date.split('/');
+  var opera2 = date.split('-');
+  lopera1 = opera1.length;
+  lopera2 = opera2.length;
+  // Extract the string into month, date and year
+  if (lopera1>1)
+  {
+  var pdate = date.split('/');
+  }
+  else if (lopera2>1)
+  {
+  var pdate = date.split('-');
+  }
+  var mm  = parseInt(pdate[0]);
+  var dd = parseInt(pdate[1]);
+  var yy = parseInt(pdate[2]);
+  // Create list of days of a month [assume there is no leap year by default]
+  var ListofDays = [31,28,31,30,31,30,31,31,30,31,30,31];
+  if (mm==1 || mm>2)
+  {
+  if (dd>ListofDays[mm-1])
+  {
+  alert('Invalid date format !'+name2);
+  return false;
+  }
+  }
+  if (mm==2)
+  {
+  var lyear = false;
+  if ( (!(yy % 4) && yy % 100) || !(yy % 400)) 
+  {
+  lyear = true;
+  }
+  if ((lyear==false) && (dd>=29))
+  {
+  alert('Invalid date format! '+name2);
+  return false;
+  }
+  if ((lyear==true) && (dd>29))
+  {
+  alert('Invalid date format! '+name2);
+  return false;
+  }
+  }
+  if (name2=='birthday'){
+      if (yy>2015 ||yy<2006){
+      alert('year can be between 2006-2015 for '+name2);
+          return(false);
+  }}
+      if (name2=='Submission date'){
+          entered=new Date(pdate[2],pdate[0]-1,pdate[1]);
+          var q = new Date();
+          var m = q.getMonth();
+          var d = q.getDate();
+          var y = q.getFullYear();
+          var Today=new Date(y, m,d);
+          console.log(m);
+          console.log(d);
+          console.log(y);
+          console.log(entered,Today);
+          
+          if (m==mm-1 && d==dd && y==yy){
+              console.log('11111!!!1111!!!!'
+                         );
+          }
+          else
+              {
+              alert("Please enter todays date for "+name2)
+          }
+      }
+  }
+  else
+  {
+  alert("Invalid date format! "+name2);
+  
+  return false;
+  }
+  }
+  else
+  {alert('plase enter date for '+name2);
+   return (false)
+       }
+    
+    
+    }}}
+    for(var i = 0; i < inputs.length; i++) {
+    if(inputs[i].type.toLowerCase() == 'text') {
+        var name2=inputs[i].getAttribute('name')
+        if (name2=='email-address'){
+            var id=inputs[i].getAttribute('id');
+            email=document.getElementById(id).value;
+            if(email !=''){
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+                {
+                break;
+                }
+            alert("You have entered an invalid email address!")
+                    return (false)
+}
+            else
+               {alert('plase enter your e-mail address');
+   return (false)}
+        }}}
+    
+        for(var i = 0; i < inputs.length; i++) {
+    if(inputs[i].type.toLowerCase() == 'text') {
+        var name2=inputs[i].getAttribute('name')
+        if (name2=='phone-number'){
+            var id=inputs[i].getAttribute('id');
+            phonenumber=document.getElementById(id).value;
+            if(phonenumber !=''){
+            if (/^(\([0-9]{3}\)|[0-9]{3}-)[0-9]{3}-[0-9]{4}$/.test(phonenumber))
+                {
+                break;
+                }
+            alert("You have entered an invalid phone-number")
+                    return (false)
+    
+    
+    }
+                        else
+               {alert('plase enter your phone nummer like 123-123-1234');
+   return (false)}
+        
+        }}}
+    letters=/^[a-zA-Z]+$/
+    var names=["firstname", "lastname" ]
+    for (i=0; i<names.length; i++){
+         for(var j = 0; j< inputs.length; j++) {
+        if(inputs[j].type.toLowerCase() == 'text') {
+        var name2=inputs[j].getAttribute('name')
+        if (name2==names[i]){
+        console.log(name2,names[i])
+            var id=inputs[j].getAttribute('id');
+            yazi=document.getElementById(id).value;
+            if(yazi !=''){
+            if (yazi.match(letters))
+                {
+                break;
+                }
+            alert("Only Letters for "+name2)
+                    return (false)
+    
+    
+    }
+                    else
+               {alert('plase enter your ' +name2+ ' using only letters');
+   return (false)}}}}}
+    
+     letters=/^[a-zA-Z-\s]*$/;
+    var names=["Parent Name", "parent sign","City" ]
+    for (i=0; i<names.length; i++){
+         for(var j = 0; j< inputs.length; j++) {
+        if(inputs[j].type.toLowerCase() == 'text') {
+        var name2=inputs[j].getAttribute('name')
+        if (name2==names[i]){
+        console.log(name2,names[i])
+            var id=inputs[j].getAttribute('id');
+            yazi=document.getElementById(id).value;
+            if(yazi !=''){
+            if (yazi.match(letters))
+                {
+                break;
+                }
+            alert("Only Letters and dash and space for "+name2)
+                    return (false)
+    
+    
+    }
+        
+                    else
+               {alert('plase enter your ' +name2+ ' only using dash adn space with letters' );
+   return (false)}
+        
+        
+        }}}}
+       letters=/^[\w\d\s-]+$/;
+    var names=["Address" ]
+    for (i=0; i<names.length; i++){
+         for(var j = 0; j< inputs.length; j++) {
+        if(inputs[j].type.toLowerCase() == 'text') {
+        var name2=inputs[j].getAttribute('name')
+        if (name2==names[i]){
+        console.log(name2,names[i])
+            var id=inputs[j].getAttribute('id');
+            yazi=document.getElementById(id).value;
+            if(yazi !=''){
+            if (yazi.match(letters))
+                {
+                break;
+                }
+            alert("Only Letters,numbers, dash and space for "+name2)
+                    return (false)
+    
+    
+    }
+         else
+               {alert('plase enter your ' +name2+ ' only using dash adn space with letters and numbers' );
+   return (false)}
+        
+        }}}}  
+    
+    letters= /^[0-9]{5}$/;
+    var names=["Zipcode" ]
+    for (i=0; i<names.length; i++){
+         for(var j = 0; j< inputs.length; j++) {
+        if(inputs[j].type.toLowerCase() == 'text') {
+        var name2=inputs[j].getAttribute('name')
+        if (name2==names[i]){
+        console.log(name2,names[i])
+            var id=inputs[j].getAttribute('id');
+            yazi=document.getElementById(id).value;
+            if(yazi !=''){
+                console.log(yazi);
+                a=letters.test(yazi);
+                console.log(a)
+            if (letters.test(yazi))
+                {
+                break;
+                }
+            alert("Only numbers for "+name2)
+                    return (false)
+    
+    
+    }
+        else
+               {alert('plase enter your ' +name2+ ' only using number like 12345' );
+   return (false)}}}}}  
+    
+    
+    
+    
+    
+    
+    
+    
+    }}
+    
+    
+    
+    
+    
+    
+    
+   
+        
+        
+        
+       
+       
+ 
+                    </script>     
+        
+        
+        
+        
+        
+        
+        </form>
+          </div>
+            <nav class="yataynav"><ul>      
+    <li ><a  href="indexflex.html" style="font-size:16px">Home</a> </li>
+    <li ><a  href="aboutflex.html" style="font-size:16px">About NYSL</a> </li>
+    <li  ><a  href="contactflex.html" style="font-size:16px">Contact</a></li>
+    <li ><a  href="gamerulespolicyflex.html" style="font-size:16px">Rules of Play &amp; Policies</a></li>
+    <li ><a  href="game_infoflex.html" style="font-size:16px">Game Information</a></li>
+    <li class='selected'><a  href="registvalidator.html" style="font-size:16px">Register </a></li>
+  </ul></nav>
+	</body>
+    
+    
+</html>
